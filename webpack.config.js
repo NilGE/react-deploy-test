@@ -1,5 +1,3 @@
-'use strict';
-
 module.exports = {
   entry: './public/app.js',
   output: {
