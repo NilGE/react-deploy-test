@@ -1,7 +1,7 @@
-'use strict';
-
 const express = require('express');
 const path = require('path');
+const config = require('./config/config.js');
+
 
 const app = express();
 
@@ -10,12 +10,10 @@ app.set('view engine', 'ejs');
 
 app.use(express.static(path.resolve(path.join(__dirname, '/dist'))));
 
-app.get('/', (req, res) => {
+app.get('*', (req, res) => {
   res.render('index');
 });
 
-const PORT = process.env.PORT || 8080;
-app.listen(PORT, () => {
-  console.log(`App listening on port ${PORT}`);
-  console.log('Press Ctrl+C to quit.');
+app.listen(config.port, config.host, () => {
+  console.info('Magic happens at port ', config.port);
 });
