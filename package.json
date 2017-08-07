@@ -1,38 +1,40 @@
 {
-  "name": "react-deploy-test",
+  "name": "blog",
   "version": "1.0.0",
-  "description": "react deploy test",
+  "description": "personal blog",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "bundle": "webpack --config webpack.config.js",
-    "prestart": "npm run bundle",
-    "dev": "nodemon --watch server --exec babel-node server/index.js --ignore dist/"
+    "start": "nodemon --watch server --exec babel-node server/index.js --ignore public/"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/NilGE/react-deploy-test.git"
+    "url": "git+https://github.com/NilGE/blog.git"
   },
-  "author": "",
+  "keywords": [
+    "blog",
+    "React",
+    "express"
+  ],
+  "author": "NILGE",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/NilGE/react-deploy-test/issues"
+    "url": "https://github.com/NilGE/blog/issues"
   },
-  "homepage": "https://github.com/NilGE/react-deploy-test#readme",
-  "dependencies": {
-    "ejs": "^2.5.7",
-    "express": "^4.15.3",
-    "react": "^15.6.1",
-    "react-dom": "^15.6.1",
-    "webpack": "^3.4.1"
-  },
+  "homepage": "https://github.com/NilGE/blog#readme",
   "devDependencies": {
-    "babel-cli": "^6.24.1",
-    "babel-loader": "^7.1.1",
-    "babel-preset-es2015": "^6.24.1",
-    "babel-preset-react": "^6.24.1",
+    "babel-cli": "^6.24.0",
+    "babel-loader": "^6.4.1",
+    "babel-preset-es2015": "^6.24.0",
+    "babel-preset-react": "^6.23.0",
     "nodemon": "^1.11.0",
-    "webpack": "^3.4.1",
-    "webpack-dev-middleware": "^1.12.0"
+    "webpack": "^2.3.1",
+    "webpack-dev-middleware": "^1.10.1"
+  },
+  "dependencies": {
+    "ejs": "^2.5.6",
+    "express": "^4.15.2",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"
   }
 }

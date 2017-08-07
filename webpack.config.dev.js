@@ -1,9 +1,11 @@
+
 export default {
   devtool: 'eval-source-map',
-  entry: './client/index.js',
+  entry: ['./client/index.js'],
   output: {
-    path: __dirname + '/dist',
-		filename: 'bundle.js'
+    path: __dirname + '/public',
+		filename: 'bundle.js',
+		publicPath: '/'
   },
   module: {
     loaders: [

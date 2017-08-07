@@ -1,5 +1,4 @@
 import express from 'express';
-import path from 'path';
 import config from '../config/config';
 
 // add webpack modules
@@ -12,14 +11,14 @@ const app = express();
 // use webpack module to resolve js
 app.use(webpackMiddleware(webpack(webpackConfig)));
 
-app.use(express.static(path.resolve(path.join(__dirname, '/dist'))));
-
 app.set('view engine', 'ejs');
 
 app.get('*', (req, res) => {
-  res.render('index');
+  res.render('index', {
+    content: 'dummy content'
+  });
 });
 
 app.listen(config.port, config.host, () => {
-  console.info('Dev - Magic happens at port ', config.port);
+  console.info('Magic happens at port ', config.port);
 });
