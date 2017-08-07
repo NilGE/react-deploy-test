@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon --watch server --exec babel-node server-dev.js --ignore public/"
+    "dev": "nodemon --watch server --exec babel-node server-dev.js --ignore public/",
+    "bundle": "webpack --config webpack.config.js",
+    "prestart": "npm run bundle"
   },
   "repository": {
     "type": "git",
