@@ -1,27 +1,25 @@
 {
-  "name": "blog",
+  "name": "react-deploy-test",
   "version": "1.0.0",
-  "description": "personal blog",
+  "description": "react deploy test",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon --watch server --exec babel-node server/index.js --ignore public/"
+    "dev": "nodemon --watch server --exec babel-node server-dev.js --ignore public/"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/NilGE/blog.git"
+    "url": "git+https://github.com/NilGE/react-deploy-test.git"
   },
   "keywords": [
-    "blog",
-    "React",
-    "express"
+    "deploy test"
   ],
   "author": "NILGE",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/NilGE/blog/issues"
+    "url": "https://github.com/NilGE/react-deploy-test/issues"
   },
-  "homepage": "https://github.com/NilGE/blog#readme",
+  "homepage": "https://github.com/NilGE/react-deploy-test#readme",
   "devDependencies": {
     "babel-cli": "^6.24.0",
     "babel-loader": "^6.4.1",
@@ -35,6 +33,7 @@
     "ejs": "^2.5.6",
     "express": "^4.15.2",
     "react": "^15.4.2",
-    "react-dom": "^15.4.2"
+    "react-dom": "^15.4.2",
+    "webpack": "^2.7.0"
   }
 }
